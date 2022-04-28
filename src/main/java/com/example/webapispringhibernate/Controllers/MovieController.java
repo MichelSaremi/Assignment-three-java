@@ -6,6 +6,7 @@ import com.example.webapispringhibernate.Repository.MovieRepository;
 import com.example.webapispringhibernate.model.Character;
 import com.example.webapispringhibernate.model.Franchise;
 import com.example.webapispringhibernate.model.Movie;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,6 +17,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @RestController
+@SecurityRequirement(name = "keycloak_implicit")
 public class MovieController {
 
     //---Repository access
